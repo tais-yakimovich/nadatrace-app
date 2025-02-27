@@ -184,4 +184,4 @@ For answers to common questions about this code of conduct, see the FAQ at
 [Sarah Salvas Signature](https://drive.google.com/file/d/1-7QZEhglVPcYW5mtHSWSDvrHc4BNi_x1/view?usp=sharing)
 [Taisa Yakimovich Signature](https://drive.google.com/file/d/1q2nbTkOwmErHebxRztKG3Bjhc9UR4Qvr/view?usp=sharing)
 [Noah Vargas Signature](https://drive.google.com/file/d/1QpSxEBuhdK7rSSthh1huLq9vTMEb5x0U/view?usp=sharing)
-[Bitanya Hailu](https://drive.google.com/file/d/1DT16D9z7rjj0QyZcvfP5-YSWCLaJWAC9/view?usp=drive_link) 
+[Bitanya Hailu Signature](https://drive.google.com/file/d/1DT16D9z7rjj0QyZcvfP5-YSWCLaJWAC9/view?usp=drive_link) 
