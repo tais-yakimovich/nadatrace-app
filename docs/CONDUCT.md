@@ -182,3 +182,4 @@ For answers to common questions about this code of conduct, see the FAQ at
 [translations]: https://www.contributor-covenant.org/translations
 
 [Sarah Salvas Signature](https://drive.google.com/file/d/1-7QZEhglVPcYW5mtHSWSDvrHc4BNi_x1/view?usp=sharing)
+[Taisa Yakimovich Signature] (https://drive.google.com/file/d/1q2nbTkOwmErHebxRztKG3Bjhc9UR4Qvr/view?usp=sharing).
