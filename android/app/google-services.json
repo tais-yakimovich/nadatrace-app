@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1063719893468",
+    "project_id": "nadatrace-app",
+    "storage_bucket": "nadatrace-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1063719893468:android:74da81caa474e38725b719",
+        "android_client_info": {
+          "package_name": "com.mycompany.nadatraceapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCL82AvsYqGUScETomRUr01OyKPtaNiQVw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
