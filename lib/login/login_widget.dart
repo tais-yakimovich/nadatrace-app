@@ -102,12 +102,12 @@ class _LoginWidgetState extends State<LoginWidget>
                           labelStyle: FlutterFlowTheme.of(context)
                               .headlineLarge
                               .override(
-                                fontFamily: 'Inter Tight',
+                                fontFamily: 'Montserrat',
                                 letterSpacing: 0.0,
                               ),
                           unselectedLabelStyle:
                               FlutterFlowTheme.of(context).titleMedium.override(
-                                    fontFamily: 'Inter Tight',
+                                    fontFamily: 'Montserrat',
                                     letterSpacing: 0.0,
                                   ),
                           indicatorColor: FlutterFlowTheme.of(context).primary,
@@ -151,7 +151,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                       labelStyle: FlutterFlowTheme.of(context)
                                           .labelMedium
                                           .override(
-                                            fontFamily: 'Inter',
+                                            fontFamily: 'Montserrat',
                                             fontSize: 18.0,
                                             letterSpacing: 0.0,
                                           ),
@@ -159,7 +159,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                       hintStyle: FlutterFlowTheme.of(context)
                                           .labelMedium
                                           .override(
-                                            fontFamily: 'Inter',
+                                            fontFamily: 'Montserrat',
                                             letterSpacing: 0.0,
                                           ),
                                       enabledBorder: OutlineInputBorder(
@@ -220,7 +220,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                     style: FlutterFlowTheme.of(context)
                                         .labelLarge
                                         .override(
-                                          fontFamily: 'Inter',
+                                          fontFamily: 'Montserrat',
                                           fontSize: 18.0,
                                           letterSpacing: 0.0,
                                         ),
@@ -247,14 +247,14 @@ class _LoginWidgetState extends State<LoginWidget>
                                       labelStyle: FlutterFlowTheme.of(context)
                                           .labelMedium
                                           .override(
-                                            fontFamily: 'Inter',
+                                            fontFamily: 'Montserrat',
                                             letterSpacing: 0.0,
                                           ),
                                       hintText: 'password...',
                                       hintStyle: FlutterFlowTheme.of(context)
                                           .labelMedium
                                           .override(
-                                            fontFamily: 'Inter',
+                                            fontFamily: 'Montserrat',
                                             letterSpacing: 0.0,
                                           ),
                                       enabledBorder: OutlineInputBorder(
@@ -313,7 +313,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                          fontFamily: 'Inter',
+                                          fontFamily: 'Montserrat',
                                           letterSpacing: 0.0,
                                         ),
                                     cursorColor: FlutterFlowTheme.of(context)
@@ -339,14 +339,14 @@ class _LoginWidgetState extends State<LoginWidget>
                                       labelStyle: FlutterFlowTheme.of(context)
                                           .labelMedium
                                           .override(
-                                            fontFamily: 'Inter',
+                                            fontFamily: 'Montserrat',
                                             letterSpacing: 0.0,
                                           ),
                                       hintText: 'confirm password...',
                                       hintStyle: FlutterFlowTheme.of(context)
                                           .labelMedium
                                           .override(
-                                            fontFamily: 'Inter',
+                                            fontFamily: 'Montserrat',
                                             letterSpacing: 0.0,
                                           ),
                                       enabledBorder: OutlineInputBorder(
@@ -406,7 +406,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                          fontFamily: 'Inter',
+                                          fontFamily: 'Montserrat',
                                           letterSpacing: 0.0,
                                         ),
                                     cursorColor: FlutterFlowTheme.of(context)
@@ -439,14 +439,14 @@ class _LoginWidgetState extends State<LoginWidget>
                                       labelStyle: FlutterFlowTheme.of(context)
                                           .labelMedium
                                           .override(
-                                            fontFamily: 'Inter',
+                                            fontFamily: 'Montserrat',
                                             letterSpacing: 0.0,
                                           ),
                                       hintText: 'email...',
                                       hintStyle: FlutterFlowTheme.of(context)
                                           .labelMedium
                                           .override(
-                                            fontFamily: 'Inter',
+                                            fontFamily: 'Montserrat',
                                             letterSpacing: 0.0,
                                           ),
                                       enabledBorder: OutlineInputBorder(
@@ -506,7 +506,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                          fontFamily: 'Inter',
+                                          fontFamily: 'Montserrat',
                                           letterSpacing: 0.0,
                                         ),
                                     keyboardType: TextInputType.emailAddress,
@@ -532,14 +532,14 @@ class _LoginWidgetState extends State<LoginWidget>
                                       labelStyle: FlutterFlowTheme.of(context)
                                           .labelMedium
                                           .override(
-                                            fontFamily: 'Inter',
+                                            fontFamily: 'Montserrat',
                                             letterSpacing: 0.0,
                                           ),
                                       hintText: 'password...',
                                       hintStyle: FlutterFlowTheme.of(context)
                                           .labelMedium
                                           .override(
-                                            fontFamily: 'Inter',
+                                            fontFamily: 'Montserrat',
                                             letterSpacing: 0.0,
                                           ),
                                       enabledBorder: OutlineInputBorder(
@@ -597,7 +597,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                          fontFamily: 'Inter',
+                                          fontFamily: 'Montserrat',
                                           letterSpacing: 0.0,
                                         ),
                                     cursorColor: FlutterFlowTheme.of(context)
@@ -646,7 +646,7 @@ class _LoginWidgetState extends State<LoginWidget>
                           textStyle: FlutterFlowTheme.of(context)
                               .labelMedium
                               .override(
-                                fontFamily: 'Inter',
+                                fontFamily: 'Montserrat',
                                 color: FlutterFlowTheme.of(context).primaryText,
                                 fontSize: 20.0,
                                 letterSpacing: 0.0,
@@ -710,7 +710,7 @@ class _LoginWidgetState extends State<LoginWidget>
                           textStyle: FlutterFlowTheme.of(context)
                               .labelMedium
                               .override(
-                                fontFamily: 'Inter',
+                                fontFamily: 'Montserrat',
                                 color: FlutterFlowTheme.of(context).primaryText,
                                 fontSize: 20.0,
                                 letterSpacing: 0.0,

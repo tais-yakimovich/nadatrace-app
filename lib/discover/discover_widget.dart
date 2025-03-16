@@ -53,7 +53,7 @@ class _DiscoverWidgetState extends State<DiscoverWidget> {
           title: Text(
             'Page Title',
             style: FlutterFlowTheme.of(context).headlineMedium.override(
-                  fontFamily: 'Inter Tight',
+                  fontFamily: 'Montserrat',
                   color: Colors.white,
                   fontSize: 22.0,
                   letterSpacing: 0.0,
@@ -85,7 +85,7 @@ class _DiscoverWidgetState extends State<DiscoverWidget> {
                       EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                   color: FlutterFlowTheme.of(context).primary,
                   textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-                        fontFamily: 'Inter Tight',
+                        fontFamily: 'Montserrat',
                         color: Colors.white,
                         letterSpacing: 0.0,
                       ),
