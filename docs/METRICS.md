@@ -1,7 +1,7 @@
 [HEART Framework Google Slide](https://docs.google.com/presentation/d/1faLNjihW0OLhgibvnLp9ItB1z5xxHWgyMiqLhe1785w/edit?usp=sharing)
 
 ## Happiness:
-* n in-app Net Promoter Score (NPS) survey asking, “How likely are you to recommend this app?”. The data from this survey will be stored in our database (most likely in NPS collection with associated user id for each response).
+* An in-app Net Promoter Score (NPS) survey asking, “How likely are you to recommend this app?”. The data from this survey will be stored in our database (most likely in NPS collection with associated user id for each response).
 
 ## Engagement:
 * Track Daily Active Users (DAU), metrics that measure activity of each user in the app constantly: total time spent in the app; total number of interactions per user; frequency of sign ups/ log ins/ log outs; number of active users; active users by country; average engagement per user.
