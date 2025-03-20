@@ -5,6 +5,6 @@ Track Daily Active Users (DAU), metrics that measure activity of each user in th
 Tracked through Firebase.  
 
 ## Adoption:
-Download rate: App stores would track this metric, as it does not include actual usage of the app, just the number of users who have downloaded it.
-Product purchases: Shopify will track product purchases, however no products will be purchasable while working on the app.
-Adoption rate: In Firebase, track “First session date” metric and analyze it over periods of time.
+* Download rate: App stores would track this metric, as it does not include actual usage of the app, just the number of users who have downloaded it.
+* Product purchases: Shopify will track product purchases, however no products will be purchasable while working on the app.
+* Adoption rate: In Firebase, track “First session date” metric and analyze it over periods of time.
