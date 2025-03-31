@@ -21,3 +21,14 @@ Experiment: Randomly assign users to the group A with the odler combined screen,
 
 Variations: Version A - combined screen: A single screen with both Signup and Login options. Email and password fields shown for both. Button Signup/LogIn changes depends on the tab the user currently on. 
 Version B - splitted screen: Users land on a decision screen first with 2 buttons: “I’m new – Create an Account” / “I already have an account – Log In”. Depending on the choice users will be redirected to a SignUp or Login screen.
+
+# Discover Page -  2 Different Layouts
+US 12
+
+Adoption, Engagement
+
+Hypothesis: The Discover Page currently has the product displayed before information about environmental impact. Users may prefer to see the information on environmental impact and before they are directed to the product page.
+
+Experiment: 50% of the audience will be presented with product first while the other 50% will be shown the impact first. Firebase Remote Config and Firebase Analytics will be used to perform the testing and collect data.
+
+Variations: Simple variations; In one instance the product will be displayed first. In the other instance, the impact information will be shown.
