@@ -107,9 +107,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier, [Widget? entryPage]) =>
         FFRoute(
           name: ProfilePageWidget.routeName,
           path: ProfilePageWidget.routePath,
-          builder: (context, params) => params.isEmpty
-              ? NavBarPage(initialPage: 'ProfilePage')
-              : ProfilePageWidget(),
+          builder: (context, params) => ProfilePageWidget(),
         ),
         FFRoute(
           name: ProductPageWidget.routeName,
@@ -129,7 +127,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier, [Widget? entryPage]) =>
         FFRoute(
           name: ProfilesettingsWidget.routeName,
           path: ProfilesettingsWidget.routePath,
-          builder: (context, params) => ProfilesettingsWidget(),
+          builder: (context, params) => params.isEmpty
+              ? NavBarPage(initialPage: 'Profilesettings')
+              : ProfilesettingsWidget(),
         ),
         FFRoute(
           name: MysubscriptionWidget.routeName,

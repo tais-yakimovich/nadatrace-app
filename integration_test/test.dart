@@ -30,7 +30,8 @@ void main() async {
 
   testWidgets('US4 Golden Path', (WidgetTester tester) async {
     _overrideOnError();
-
+    await FirebaseAuth.instance.signInWithEmailAndPassword(
+        email: 'sarahtest@mail.com', password: 'password');
     await tester.pumpWidget(MyApp(
       entryPage: DiscoverLayout1Widget(),
     ));

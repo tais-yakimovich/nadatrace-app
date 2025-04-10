@@ -129,7 +129,7 @@ class NavBarPage extends StatefulWidget {
 
 /// This is the private State class that goes with NavBarPage.
 class _NavBarPageState extends State<NavBarPage> {
-  String _currentPageName = 'ProfilePage';
+  String _currentPageName = 'discoverLayout1';
   late Widget? _currentPage;
 
   @override
@@ -144,7 +144,7 @@ class _NavBarPageState extends State<NavBarPage> {
     final tabs = {
       'discoverLayout1': DiscoverLayout1Widget(),
       'tracking': TrackingWidget(),
-      'ProfilePage': ProfilePageWidget(),
+      'Profilesettings': ProfilesettingsWidget(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
 
