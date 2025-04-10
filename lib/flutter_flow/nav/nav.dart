@@ -5,6 +5,7 @@ import 'package:provider/provider.dart';
 
 import '/auth/base_auth_user_provider.dart';
 
+import '/main.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 
 import '/index.dart';
@@ -69,19 +70,22 @@ class AppStateNotifier extends ChangeNotifier {
   }
 }
 
-GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
+GoRouter createRouter(AppStateNotifier appStateNotifier, [Widget? entryPage]) =>
+    GoRouter(
       initialLocation: '/',
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
       navigatorKey: appNavigatorKey,
-      errorBuilder: (context, state) =>
-          appStateNotifier.loggedIn ? ProfileWidget() : HomePageWidget(),
+      errorBuilder: (context, state) => appStateNotifier.loggedIn
+          ? entryPage ?? NavBarPage()
+          : HomePageWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
-          builder: (context, _) =>
-              appStateNotifier.loggedIn ? ProfileWidget() : HomePageWidget(),
+          builder: (context, _) => appStateNotifier.loggedIn
+              ? entryPage ?? NavBarPage()
+              : HomePageWidget(),
         ),
         FFRoute(
           name: HomePageWidget.routeName,
@@ -94,14 +98,65 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => LoginWidget(),
         ),
         FFRoute(
-          name: ProfileWidget.routeName,
-          path: ProfileWidget.routePath,
-          builder: (context, params) => ProfileWidget(),
+          name: DiscoverLayout1Widget.routeName,
+          path: DiscoverLayout1Widget.routePath,
+          builder: (context, params) => params.isEmpty
+              ? NavBarPage(initialPage: 'discoverLayout1')
+              : DiscoverLayout1Widget(),
         ),
         FFRoute(
-          name: DiscoverWidget.routeName,
-          path: DiscoverWidget.routePath,
-          builder: (context, params) => DiscoverWidget(),
+          name: ProfilePageWidget.routeName,
+          path: ProfilePageWidget.routePath,
+          builder: (context, params) => params.isEmpty
+              ? NavBarPage(initialPage: 'ProfilePage')
+              : ProfilePageWidget(),
+        ),
+        FFRoute(
+          name: ProductPageWidget.routeName,
+          path: ProductPageWidget.routePath,
+          builder: (context, params) => ProductPageWidget(),
+        ),
+        FFRoute(
+          name: QuizWidget.routeName,
+          path: QuizWidget.routePath,
+          builder: (context, params) => QuizWidget(),
+        ),
+        FFRoute(
+          name: CartWidget.routeName,
+          path: CartWidget.routePath,
+          builder: (context, params) => CartWidget(),
+        ),
+        FFRoute(
+          name: ProfilesettingsWidget.routeName,
+          path: ProfilesettingsWidget.routePath,
+          builder: (context, params) => ProfilesettingsWidget(),
+        ),
+        FFRoute(
+          name: MysubscriptionWidget.routeName,
+          path: MysubscriptionWidget.routePath,
+          builder: (context, params) => MysubscriptionWidget(),
+        ),
+        FFRoute(
+          name: OrderWidget.routeName,
+          path: OrderWidget.routePath,
+          builder: (context, params) => OrderWidget(),
+        ),
+        FFRoute(
+          name: UpdateshippingWidget.routeName,
+          path: UpdateshippingWidget.routePath,
+          builder: (context, params) => UpdateshippingWidget(),
+        ),
+        FFRoute(
+          name: DiscoverLayout2Widget.routeName,
+          path: DiscoverLayout2Widget.routePath,
+          builder: (context, params) => DiscoverLayout2Widget(),
+        ),
+        FFRoute(
+          name: TrackingWidget.routeName,
+          path: TrackingWidget.routePath,
+          builder: (context, params) => params.isEmpty
+              ? NavBarPage(initialPage: 'tracking')
+              : TrackingWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
