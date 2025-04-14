@@ -138,6 +138,7 @@ class _DiscoverLayout1WidgetState extends State<DiscoverLayout1Widget> {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Text(
+                            key: ValueKey('product_title_ymvj'),
                             'compostable sealable paper sandwich bag',
                             textAlign: TextAlign.start,
                             style: FlutterFlowTheme.of(context)
