@@ -63,6 +63,10 @@ dependencies:
   fl_chart: 0.68.0
   flutter_animate: 4.5.0
   flutter_cache_manager: 3.4.1
+  flutter_credit_card: 
+    git:
+      url: https://github.com/FlutterFlow/flutter_credit_card
+      ref: v4.0.2
   flutter_plugin_android_lifecycle: 2.0.20
   font_awesome_flutter: 10.7.0
   from_css_color: 2.0.0

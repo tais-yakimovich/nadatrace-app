@@ -37,19 +37,11 @@ void main() async {
     ));
     await GoogleFonts.pendingFonts();
 
-    await tester.pumpAndSettle(const Duration(milliseconds: 5000));
-    await tester.scrollUntilVisible(
-      find.byKey(const ValueKey('learnButton_rer7')),
-      100.0,
-      scrollable: find
-          .descendant(
-            of: find.byKey(const ValueKey('Column_0bci')),
-            matching: find.byType(Scrollable),
-          )
-          .first,
-    );
+    await tester.pumpAndSettle(const Duration(milliseconds: 60000));
     await tester.tap(find.byKey(const ValueKey('learnButton_rer7')));
-    await tester.pumpAndSettle(const Duration(milliseconds: 5000));
+    await tester.pump(kDoubleTapMinTime);
+    await tester.tap(find.byKey(const ValueKey('learnButton_rer7')));
+    await tester.pumpAndSettle(const Duration(milliseconds: 60000));
     expect(find.byKey(const ValueKey('Text_8gd5')), findsOneWidget);
   });
 }

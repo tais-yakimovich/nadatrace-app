@@ -62,7 +62,6 @@ class _DiscoverLayout1WidgetState extends State<DiscoverLayout1Widget> {
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
         body: SingleChildScrollView(
-          key: ValueKey('Column_0bci'),
           child: Column(
             mainAxisSize: MainAxisSize.max,
             children: [

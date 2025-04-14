@@ -157,6 +157,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier, [Widget? entryPage]) =>
           builder: (context, params) => params.isEmpty
               ? NavBarPage(initialPage: 'tracking')
               : TrackingWidget(),
+        ),
+        FFRoute(
+          name: PaymentinfoWidget.routeName,
+          path: PaymentinfoWidget.routePath,
+          builder: (context, params) => PaymentinfoWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

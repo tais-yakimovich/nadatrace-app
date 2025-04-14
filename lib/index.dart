@@ -17,3 +17,4 @@ export '/pages/updateshipping/updateshipping_widget.dart'
 export '/pages/discover_layout2/discover_layout2_widget.dart'
     show DiscoverLayout2Widget;
 export '/pages/tracking/tracking_widget.dart' show TrackingWidget;
+export '/pages/paymentinfo/paymentinfo_widget.dart' show PaymentinfoWidget;

@@ -76,6 +76,7 @@ class _MysubscriptionWidgetState extends State<MysubscriptionWidget> {
           ),
           actions: [],
           centerTitle: false,
+          toolbarHeight: 50.0,
           elevation: 0.0,
         ),
         body: SafeArea(
@@ -85,12 +86,16 @@ class _MysubscriptionWidgetState extends State<MysubscriptionWidget> {
             child: SingleChildScrollView(
               child: Column(
                 mainAxisSize: MainAxisSize.max,
-                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Padding(
                     padding: EdgeInsets.all(16.0),
                     child: Container(
                       width: double.infinity,
+                      constraints: BoxConstraints(
+                        maxWidth: 770.0,
+                      ),
                       decoration: BoxDecoration(
                         color: Color(0xFFF6F5E9),
                         boxShadow: [
@@ -105,6 +110,7 @@ class _MysubscriptionWidgetState extends State<MysubscriptionWidget> {
                         ],
                         borderRadius: BorderRadius.circular(12.0),
                       ),
+                      alignment: AlignmentDirectional(0.0, 0.0),
                       child: Padding(
                         padding: EdgeInsets.all(16.0),
                         child: Column(
@@ -244,6 +250,9 @@ class _MysubscriptionWidgetState extends State<MysubscriptionWidget> {
                     padding: EdgeInsets.all(16.0),
                     child: Container(
                       width: double.infinity,
+                      constraints: BoxConstraints(
+                        maxWidth: 770.0,
+                      ),
                       decoration: BoxDecoration(
                         color: FlutterFlowTheme.of(context).primaryBackground,
                         boxShadow: [
@@ -413,6 +422,9 @@ class _MysubscriptionWidgetState extends State<MysubscriptionWidget> {
                     padding: EdgeInsets.all(16.0),
                     child: Container(
                       width: double.infinity,
+                      constraints: BoxConstraints(
+                        maxWidth: 770.0,
+                      ),
                       decoration: BoxDecoration(
                         color: FlutterFlowTheme.of(context).primaryBackground,
                         boxShadow: [
