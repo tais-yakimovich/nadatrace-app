@@ -156,6 +156,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                       child: Container(
                                         width: double.infinity,
                                         child: TextFormField(
+                                          key: ValueKey('Signup-email_45vb'),
                                           controller:
                                               _model.signupEmailTextController,
                                           focusNode:
@@ -276,6 +277,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                       child: Container(
                                         width: double.infinity,
                                         child: TextFormField(
+                                          key: ValueKey('signup-password_6tej'),
                                           controller: _model
                                               .signupPasswordTextController,
                                           focusNode:
@@ -382,6 +384,8 @@ class _LoginWidgetState extends State<LoginWidget>
                                     Container(
                                       width: double.infinity,
                                       child: TextFormField(
+                                        key: ValueKey(
+                                            'signup-ConfirmPassword_n0vc'),
                                         controller: _model
                                             .signupConfirmPasswordTextController,
                                         focusNode: _model
