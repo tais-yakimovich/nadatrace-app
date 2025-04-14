@@ -4,4 +4,4 @@
 
 [US3: User Account Creation](https://docs.google.com/presentation/d/16zsfZhDRslost1mYHDwpO9yhQg0ygBdN5P_UE_Mi2wQ/edit#slide=id.g34a07e1e104_0_5)
 
-[US6: Golden Path](https://docs.google.com/presentation/d/16zsfZhDRslost1mYHDwpO9yhQg0ygBdN5P_UE_Mi2wQ/edit#slide=id.g34a07e1e104_0_10)
+[US6: Golden Path](https://docs.google.com/presentation/d/1Gg8CEgq87BOahzJS_I4OcsBw3nVJBdiF5O247Szbgt4/edit?usp=sharing)
