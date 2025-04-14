@@ -3,6 +3,8 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
 import '/index.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart'
+    as smooth_page_indicator;
 import 'package:ff_theme/flutter_flow/flutter_flow_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
@@ -183,26 +185,67 @@ class _ProductPageWidgetState extends State<ProductPageWidget> {
                           return Container(
                             width: 388.0,
                             height: 200.0,
-                            child: PageView.builder(
-                              controller: _model.pageViewController ??=
-                                  PageController(
-                                      initialPage:
-                                          max(0, min(0, test.length - 1))),
-                              scrollDirection: Axis.horizontal,
-                              itemCount: test.length,
-                              itemBuilder: (context, testIndex) {
-                                final testItem = test[testIndex];
-                                return ClipRRect(
-                                  borderRadius: BorderRadius.circular(8.0),
-                                  child: Image.network(
-                                    _model.bodyImages
-                                        .elementAtOrNull(testIndex)!,
-                                    width: 200.0,
-                                    height: 200.0,
-                                    fit: BoxFit.cover,
+                            child: Stack(
+                              children: [
+                                PageView.builder(
+                                  controller: _model.pageViewController ??=
+                                      PageController(
+                                          initialPage:
+                                              max(0, min(0, test.length - 1))),
+                                  scrollDirection: Axis.horizontal,
+                                  itemCount: test.length,
+                                  itemBuilder: (context, testIndex) {
+                                    final testItem = test[testIndex];
+                                    return ClipRRect(
+                                      borderRadius: BorderRadius.circular(8.0),
+                                      child: Image.network(
+                                        _model.bodyImages
+                                            .elementAtOrNull(testIndex)!,
+                                        width: 200.0,
+                                        height: 200.0,
+                                        fit: BoxFit.cover,
+                                      ),
+                                    );
+                                  },
+                                ),
+                                Align(
+                                  alignment: AlignmentDirectional(0.0, 1.0),
+                                  child: Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        0.0, 0.0, 0.0, 16.0),
+                                    child: smooth_page_indicator
+                                        .SmoothPageIndicator(
+                                      controller: _model.pageViewController ??=
+                                          PageController(
+                                              initialPage: max(
+                                                  0, min(0, test.length - 1))),
+                                      count: test.length,
+                                      axisDirection: Axis.horizontal,
+                                      onDotClicked: (i) async {
+                                        await _model.pageViewController!
+                                            .animateToPage(
+                                          i,
+                                          duration: Duration(milliseconds: 500),
+                                          curve: Curves.ease,
+                                        );
+                                        safeSetState(() {});
+                                      },
+                                      effect: smooth_page_indicator.SlideEffect(
+                                        spacing: 8.0,
+                                        radius: 8.0,
+                                        dotWidth: 8.0,
+                                        dotHeight: 8.0,
+                                        dotColor: FlutterFlowTheme.of(context)
+                                            .accent1,
+                                        activeDotColor:
+                                            FlutterFlowTheme.of(context)
+                                                .primary,
+                                        paintStyle: PaintingStyle.fill,
+                                      ),
+                                    ),
                                   ),
-                                );
-                              },
+                                ),
+                              ],
                             ),
                           );
                         },

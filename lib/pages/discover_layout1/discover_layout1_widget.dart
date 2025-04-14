@@ -1,6 +1,8 @@
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/index.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart'
+    as smooth_page_indicator;
 import 'package:ff_theme/flutter_flow/flutter_flow_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
@@ -251,50 +253,85 @@ class _DiscoverLayout1WidgetState extends State<DiscoverLayout1Widget> {
                     return 600.0;
                   }
                 }(),
-                child: Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 40.0),
-                  child: PageView(
-                    controller: _model.pageViewController ??=
-                        PageController(initialPage: 0),
-                    scrollDirection: Axis.horizontal,
-                    children: [
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(0.0),
-                        child: Image.asset(
-                          'assets/images/slide1.png',
-                          fit: BoxFit.cover,
+                child: Stack(
+                  children: [
+                    Padding(
+                      padding:
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 40.0),
+                      child: PageView(
+                        controller: _model.pageViewController ??=
+                            PageController(initialPage: 0),
+                        scrollDirection: Axis.horizontal,
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(0.0),
+                            child: Image.asset(
+                              'assets/images/slide1.png',
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(0.0),
+                            child: Image.asset(
+                              'assets/images/slide2.png',
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(0.0),
+                            child: Image.asset(
+                              'assets/images/slide3.png',
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(0.0),
+                            child: Image.asset(
+                              'assets/images/slide4.png',
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(0.0),
+                            child: Image.asset(
+                              'assets/images/slide5.png',
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Align(
+                      alignment: AlignmentDirectional(0.0, 1.0),
+                      child: Padding(
+                        padding:
+                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 16.0),
+                        child: smooth_page_indicator.SmoothPageIndicator(
+                          controller: _model.pageViewController ??=
+                              PageController(initialPage: 0),
+                          count: 5,
+                          axisDirection: Axis.horizontal,
+                          onDotClicked: (i) async {
+                            await _model.pageViewController!.animateToPage(
+                              i,
+                              duration: Duration(milliseconds: 500),
+                              curve: Curves.ease,
+                            );
+                            safeSetState(() {});
+                          },
+                          effect: smooth_page_indicator.SlideEffect(
+                            spacing: 8.0,
+                            radius: 8.0,
+                            dotWidth: 8.0,
+                            dotHeight: 8.0,
+                            dotColor: Color(0x6632640F),
+                            activeDotColor: Color(0xFF32640F),
+                            paintStyle: PaintingStyle.fill,
+                          ),
                         ),
                       ),
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(0.0),
-                        child: Image.asset(
-                          'assets/images/slide2.png',
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(0.0),
-                        child: Image.asset(
-                          'assets/images/slide3.png',
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(0.0),
-                        child: Image.asset(
-                          'assets/images/slide4.png',
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(0.0),
-                        child: Image.asset(
-                          'assets/images/slide5.png',
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
               ),
               Container(
