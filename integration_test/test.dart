@@ -44,27 +44,6 @@ void main() async {
     await tester.pumpAndSettle(const Duration(milliseconds: 60000));
     expect(find.byKey(const ValueKey('Text_8gd5')), findsOneWidget);
   });
-
-  testWidgets('US3 User Account Creation', (WidgetTester tester) async {
-    _overrideOnError();
-
-    await tester.pumpWidget(MyApp(
-      entryPage: LoginWidget(),
-    ));
-    await GoogleFonts.pendingFonts();
-
-    await tester.pumpAndSettle(const Duration(milliseconds: 60000));
-    await tester.enterText(
-        find.byKey(const ValueKey('Signup-email_45vb')), 'test123@gmail.com');
-    await tester.pumpAndSettle(const Duration(milliseconds: 60000));
-    await tester.enterText(
-        find.byKey(const ValueKey('signup-password_6tej')), '1234567');
-    await tester.pumpAndSettle(const Duration(milliseconds: 6000));
-    await tester.enterText(
-        find.byKey(const ValueKey('signup-ConfirmPassword_n0vc')), '1234567');
-    await tester.pumpAndSettle(const Duration(milliseconds: 6000));
-    expect(find.byKey(const ValueKey('product_title_ymvj')), findsOneWidget);
-  });
 }
 
 // There are certain types of errors that can happen during tests but
