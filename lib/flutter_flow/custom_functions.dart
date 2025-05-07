@@ -21,7 +21,91 @@ String newCustomFunction(String? productDescription) {
   return productDescription.replaceAll(RegExp(r'<[^>]*>'), '');
 }
 
-List<int>? sampleData() {
-  // i need this function to return a list of numbers from 1 to 100
-  return List<int>.generate(25, (index) => index + 1);
+List<double>? sampleDataX() {
+  return [for (int i = 0; i < 53; i++) i.toDouble()];
+}
+
+List<double>? sampleDataY() {
+  return [
+    17.4,
+    17.1,
+    16.8,
+    17.3,
+    16.1,
+    15.9,
+    15.9,
+    15.9,
+    14.7,
+    14.0,
+    14.1,
+    13.6,
+    13.6,
+    12.6,
+    12.6,
+    12.6,
+    11.8,
+    11.8,
+    11.1,
+    10.8,
+    10.8,
+    11.8,
+    11.8,
+    9.3,
+    9.3,
+    9.3,
+    10.7,
+    10.7,
+    10.7,
+    8.2,
+    8.8,
+    7.5,
+    6.1,
+    6.1,
+    6.1,
+    5.0,
+    5.4,
+    5.4,
+    5.0,
+    5.0,
+    3.3,
+    3.3,
+    3.3,
+    2.2,
+    1.4,
+    1.5,
+    1.2,
+    0.7,
+    0.5,
+    0.5,
+    0.3,
+    0.4,
+    0.0
+  ];
+}
+
+double priceTax(
+  int numProduct,
+  double productPrice,
+  double taxPercent,
+) {
+  double subtotal = numProduct * productPrice;
+  return subtotal * taxPercent;
+}
+
+double priceTotal(
+  double productPrice,
+  int numProducts,
+  double shipping,
+  double taxPercent,
+) {
+  double subtotal = productPrice * numProducts;
+  return (subtotal * taxPercent) + shipping;
+}
+
+double priceMultiply(
+  int numProduct,
+  double productPrice,
+) {
+  // Multiply the two variables together and return them.
+  return numProduct * productPrice;
 }

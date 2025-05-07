@@ -5,9 +5,11 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/upload_data.dart';
+import 'dart:async';
 import '/index.dart';
 import 'package:ff_theme/flutter_flow/flutter_flow_theme.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'profile_page_model.dart';
 export 'profile_page_model.dart';
 
@@ -104,10 +106,18 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                               style: FlutterFlowTheme.of(context)
                                   .headlineLarge
                                   .override(
-                                    fontFamily: 'Montserrat',
+                                    font: GoogleFonts.montserrat(
+                                      fontWeight: FontWeight.bold,
+                                      fontStyle: FlutterFlowTheme.of(context)
+                                          .headlineLarge
+                                          .fontStyle,
+                                    ),
                                     fontSize: 24.0,
                                     letterSpacing: 0.0,
                                     fontWeight: FontWeight.bold,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .headlineLarge
+                                        .fontStyle,
                                   ),
                             ),
                           ),
@@ -239,18 +249,44 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                             labelStyle: FlutterFlowTheme.of(context)
                                 .labelMedium
                                 .override(
-                                  fontFamily: 'Montserrat',
+                                  font: GoogleFonts.montserrat(
+                                    fontWeight: FlutterFlowTheme.of(context)
+                                        .labelMedium
+                                        .fontWeight,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .labelMedium
+                                        .fontStyle,
+                                  ),
                                   fontSize: 18.0,
                                   letterSpacing: 0.0,
+                                  fontWeight: FlutterFlowTheme.of(context)
+                                      .labelMedium
+                                      .fontWeight,
+                                  fontStyle: FlutterFlowTheme.of(context)
+                                      .labelMedium
+                                      .fontStyle,
                                 ),
                             hintText: 'name...',
                             hintStyle: FlutterFlowTheme.of(context)
                                 .labelMedium
                                 .override(
-                                  fontFamily: 'Montserrat',
+                                  font: GoogleFonts.montserrat(
+                                    fontWeight: FlutterFlowTheme.of(context)
+                                        .labelMedium
+                                        .fontWeight,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .labelMedium
+                                        .fontStyle,
+                                  ),
                                   color:
                                       FlutterFlowTheme.of(context).primaryText,
                                   letterSpacing: 0.0,
+                                  fontWeight: FlutterFlowTheme.of(context)
+                                      .labelMedium
+                                      .fontWeight,
+                                  fontStyle: FlutterFlowTheme.of(context)
+                                      .labelMedium
+                                      .fontStyle,
                                 ),
                             enabledBorder: OutlineInputBorder(
                               borderSide: BorderSide(
@@ -287,10 +323,23 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                           style: FlutterFlowTheme.of(context)
                               .labelLarge
                               .override(
-                                fontFamily: 'Montserrat',
+                                font: GoogleFonts.montserrat(
+                                  fontWeight: FlutterFlowTheme.of(context)
+                                      .labelLarge
+                                      .fontWeight,
+                                  fontStyle: FlutterFlowTheme.of(context)
+                                      .labelLarge
+                                      .fontStyle,
+                                ),
                                 color: FlutterFlowTheme.of(context).primaryText,
                                 fontSize: 18.0,
                                 letterSpacing: 0.0,
+                                fontWeight: FlutterFlowTheme.of(context)
+                                    .labelLarge
+                                    .fontWeight,
+                                fontStyle: FlutterFlowTheme.of(context)
+                                    .labelLarge
+                                    .fontStyle,
                               ),
                           cursorColor: FlutterFlowTheme.of(context).primaryText,
                           validator: _model.nameTextControllerValidator
@@ -313,18 +362,44 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                             labelStyle: FlutterFlowTheme.of(context)
                                 .labelMedium
                                 .override(
-                                  fontFamily: 'Montserrat',
+                                  font: GoogleFonts.montserrat(
+                                    fontWeight: FlutterFlowTheme.of(context)
+                                        .labelMedium
+                                        .fontWeight,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .labelMedium
+                                        .fontStyle,
+                                  ),
                                   fontSize: 18.0,
                                   letterSpacing: 0.0,
+                                  fontWeight: FlutterFlowTheme.of(context)
+                                      .labelMedium
+                                      .fontWeight,
+                                  fontStyle: FlutterFlowTheme.of(context)
+                                      .labelMedium
+                                      .fontStyle,
                                 ),
                             hintText: 'address...',
                             hintStyle: FlutterFlowTheme.of(context)
                                 .labelMedium
                                 .override(
-                                  fontFamily: 'Montserrat',
+                                  font: GoogleFonts.montserrat(
+                                    fontWeight: FlutterFlowTheme.of(context)
+                                        .labelMedium
+                                        .fontWeight,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .labelMedium
+                                        .fontStyle,
+                                  ),
                                   color:
                                       FlutterFlowTheme.of(context).primaryText,
                                   letterSpacing: 0.0,
+                                  fontWeight: FlutterFlowTheme.of(context)
+                                      .labelMedium
+                                      .fontWeight,
+                                  fontStyle: FlutterFlowTheme.of(context)
+                                      .labelMedium
+                                      .fontStyle,
                                 ),
                             enabledBorder: OutlineInputBorder(
                               borderSide: BorderSide(
@@ -358,12 +433,27 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                             fillColor:
                                 FlutterFlowTheme.of(context).primaryBackground,
                           ),
-                          style:
-                              FlutterFlowTheme.of(context).labelLarge.override(
-                                    fontFamily: 'Montserrat',
-                                    fontSize: 18.0,
-                                    letterSpacing: 0.0,
-                                  ),
+                          style: FlutterFlowTheme.of(context)
+                              .labelLarge
+                              .override(
+                                font: GoogleFonts.montserrat(
+                                  fontWeight: FlutterFlowTheme.of(context)
+                                      .labelLarge
+                                      .fontWeight,
+                                  fontStyle: FlutterFlowTheme.of(context)
+                                      .labelLarge
+                                      .fontStyle,
+                                ),
+                                color: FlutterFlowTheme.of(context).primaryText,
+                                fontSize: 18.0,
+                                letterSpacing: 0.0,
+                                fontWeight: FlutterFlowTheme.of(context)
+                                    .labelLarge
+                                    .fontWeight,
+                                fontStyle: FlutterFlowTheme.of(context)
+                                    .labelLarge
+                                    .fontStyle,
+                              ),
                           cursorColor: FlutterFlowTheme.of(context).primaryText,
                           validator: _model.addressTextControllerValidator
                               .asValidator(context),
@@ -418,12 +508,20 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                             textStyle: FlutterFlowTheme.of(context)
                                 .labelMedium
                                 .override(
-                                  fontFamily: 'Montserrat',
+                                  font: GoogleFonts.montserrat(
+                                    fontWeight: FontWeight.w500,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .labelMedium
+                                        .fontStyle,
+                                  ),
                                   color:
                                       FlutterFlowTheme.of(context).primaryText,
                                   fontSize: 20.0,
                                   letterSpacing: 0.0,
                                   fontWeight: FontWeight.w500,
+                                  fontStyle: FlutterFlowTheme.of(context)
+                                      .labelMedium
+                                      .fontStyle,
                                 ),
                             elevation: 0.0,
                             borderSide: BorderSide(
@@ -442,22 +540,19 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                           logFirebaseEvent(
                               'PROFILE_PAGE_PAGE_CompleteProfile_ON_TAP');
                           logFirebaseEvent('CompleteProfile_backend_call');
+                          unawaited(
+                            () async {
+                              await currentUserReference!
+                                  .update(createUsersRecordData(
+                                displayName: _model.nameTextController.text,
+                                bday: _model.datePicked,
+                                address: _model.addressTextController.text,
+                              ));
+                            }(),
+                          );
+                          logFirebaseEvent('CompleteProfile_navigate_to');
 
-                          await currentUserReference!
-                              .update(createUsersRecordData(
-                            displayName: _model.nameTextController.text,
-                            bday: _model.datePicked,
-                            address: _model.addressTextController.text,
-                          ));
-                          if (getRemoteConfigBool('discoverPageLayout')) {
-                            logFirebaseEvent('CompleteProfile_navigate_to');
-
-                            context.pushNamed(DiscoverLayout2Widget.routeName);
-                          } else {
-                            logFirebaseEvent('CompleteProfile_navigate_to');
-
-                            context.pushNamed(DiscoverLayout1Widget.routeName);
-                          }
+                          context.goNamed(DiscoverLayout1Widget.routeName);
                         },
                         text: 'complete profile',
                         options: FFButtonOptions(
@@ -471,11 +566,19 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                           textStyle: FlutterFlowTheme.of(context)
                               .labelMedium
                               .override(
-                                fontFamily: 'Montserrat',
+                                font: GoogleFonts.montserrat(
+                                  fontWeight: FontWeight.w500,
+                                  fontStyle: FlutterFlowTheme.of(context)
+                                      .labelMedium
+                                      .fontStyle,
+                                ),
                                 color: FlutterFlowTheme.of(context).primaryText,
                                 fontSize: 20.0,
                                 letterSpacing: 0.0,
                                 fontWeight: FontWeight.w500,
+                                fontStyle: FlutterFlowTheme.of(context)
+                                    .labelMedium
+                                    .fontStyle,
                               ),
                           elevation: 0.0,
                           borderSide: BorderSide(
@@ -486,33 +589,50 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                         ),
                       ),
                     ),
-                    FFButtonWidget(
-                      onPressed: () async {
-                        logFirebaseEvent('PROFILE_PAGE_PAGE_BUTTON_BTN_ON_TAP');
-                        logFirebaseEvent('Button_auth');
-                        GoRouter.of(context).prepareAuthEvent();
-                        await authManager.signOut();
-                        GoRouter.of(context).clearRedirectLocation();
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(
+                          24.0, 13.0, 24.0, 13.0),
+                      child: FFButtonWidget(
+                        onPressed: () async {
+                          logFirebaseEvent(
+                              'PROFILE_PAGE_PAGE_SkipProfile_ON_TAP');
+                          logFirebaseEvent('SkipProfile_navigate_to');
 
-                        context.goNamedAuth(
-                            HomePageWidget.routeName, context.mounted);
-                      },
-                      text: 'Button',
-                      options: FFButtonOptions(
-                        height: 40.0,
-                        padding: EdgeInsetsDirectional.fromSTEB(
-                            16.0, 0.0, 16.0, 0.0),
-                        iconPadding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                        color: FlutterFlowTheme.of(context).primary,
-                        textStyle:
-                            FlutterFlowTheme.of(context).titleSmall.override(
-                                  fontFamily: 'Montserrat',
-                                  color: Colors.white,
-                                  letterSpacing: 0.0,
+                          context.goNamed(DiscoverLayout1Widget.routeName);
+                        },
+                        text: 'skip for now',
+                        options: FFButtonOptions(
+                          width: 250.0,
+                          height: 40.0,
+                          padding: EdgeInsetsDirectional.fromSTEB(
+                              16.0, 0.0, 16.0, 0.0),
+                          iconPadding: EdgeInsetsDirectional.fromSTEB(
+                              0.0, 0.0, 0.0, 0.0),
+                          color: Color(0xFFA49E8F),
+                          textStyle: FlutterFlowTheme.of(context)
+                              .labelMedium
+                              .override(
+                                font: GoogleFonts.montserrat(
+                                  fontWeight: FontWeight.w500,
+                                  fontStyle: FlutterFlowTheme.of(context)
+                                      .labelMedium
+                                      .fontStyle,
                                 ),
-                        elevation: 0.0,
-                        borderRadius: BorderRadius.circular(8.0),
+                                color: FlutterFlowTheme.of(context).primaryText,
+                                fontSize: 20.0,
+                                letterSpacing: 0.0,
+                                fontWeight: FontWeight.w500,
+                                fontStyle: FlutterFlowTheme.of(context)
+                                    .labelMedium
+                                    .fontStyle,
+                              ),
+                          elevation: 0.0,
+                          borderSide: BorderSide(
+                            color: FlutterFlowTheme.of(context).primaryText,
+                            width: 1.0,
+                          ),
+                          borderRadius: BorderRadius.circular(12.0),
+                        ),
                       ),
                     ),
                   ],

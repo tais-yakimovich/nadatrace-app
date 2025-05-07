@@ -15,15 +15,15 @@ class NpsResponseRecord extends FirestoreRecord {
     _initializeFields();
   }
 
-  // "responseText" field.
-  String? _responseText;
-  String get responseText => _responseText ?? '';
-  bool hasResponseText() => _responseText != null;
-
   // "userid" field.
   DocumentReference? _userid;
   DocumentReference? get userid => _userid;
   bool hasUserid() => _userid != null;
+
+  // "responseText" field.
+  String? _responseText;
+  String get responseText => _responseText ?? '';
+  bool hasResponseText() => _responseText != null;
 
   // "rating" field.
   String? _rating;
@@ -31,8 +31,8 @@ class NpsResponseRecord extends FirestoreRecord {
   bool hasRating() => _rating != null;
 
   void _initializeFields() {
-    _responseText = snapshotData['responseText'] as String?;
     _userid = snapshotData['userid'] as DocumentReference?;
+    _responseText = snapshotData['responseText'] as String?;
     _rating = snapshotData['rating'] as String?;
   }
 
@@ -71,14 +71,14 @@ class NpsResponseRecord extends FirestoreRecord {
 }
 
 Map<String, dynamic> createNpsResponseRecordData({
-  String? responseText,
   DocumentReference? userid,
+  String? responseText,
   String? rating,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
-      'responseText': responseText,
       'userid': userid,
+      'responseText': responseText,
       'rating': rating,
     }.withoutNulls,
   );
@@ -91,14 +91,14 @@ class NpsResponseRecordDocumentEquality implements Equality<NpsResponseRecord> {
 
   @override
   bool equals(NpsResponseRecord? e1, NpsResponseRecord? e2) {
-    return e1?.responseText == e2?.responseText &&
-        e1?.userid == e2?.userid &&
+    return e1?.userid == e2?.userid &&
+        e1?.responseText == e2?.responseText &&
         e1?.rating == e2?.rating;
   }
 
   @override
   int hash(NpsResponseRecord? e) =>
-      const ListEquality().hash([e?.responseText, e?.userid, e?.rating]);
+      const ListEquality().hash([e?.userid, e?.responseText, e?.rating]);
 
   @override
   bool isValidKey(Object? o) => o is NpsResponseRecord;

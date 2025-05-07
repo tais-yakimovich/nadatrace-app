@@ -5,7 +5,7 @@ import 'package:smooth_page_indicator/smooth_page_indicator.dart'
     as smooth_page_indicator;
 import 'package:ff_theme/flutter_flow/flutter_flow_theme.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'discover_layout1_model.dart';
 export 'discover_layout1_model.dart';
 
@@ -31,16 +31,6 @@ class _DiscoverLayout1WidgetState extends State<DiscoverLayout1Widget> {
 
     logFirebaseEvent('screen_view',
         parameters: {'screen_name': 'discoverLayout1'});
-    // On page load action.
-    SchedulerBinding.instance.addPostFrameCallback((_) async {
-      logFirebaseEvent('DISCOVER_LAYOUT1_discoverLayout1_ON_INIT');
-      if (getRemoteConfigBool('discoverPageLayout')) {
-        logFirebaseEvent('discoverLayout1_navigate_to');
-
-        context.pushNamed(DiscoverLayout2Widget.routeName);
-      }
-    });
-
     WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
@@ -85,10 +75,23 @@ class _DiscoverLayout1WidgetState extends State<DiscoverLayout1Widget> {
                       style: FlutterFlowTheme.of(context)
                           .headlineMedium
                           .override(
-                            fontFamily: 'Montserrat',
+                            font: GoogleFonts.montserrat(
+                              fontWeight: FlutterFlowTheme.of(context)
+                                  .headlineMedium
+                                  .fontWeight,
+                              fontStyle: FlutterFlowTheme.of(context)
+                                  .headlineMedium
+                                  .fontStyle,
+                            ),
                             color: FlutterFlowTheme.of(context).secondaryText,
                             fontSize: 20.0,
                             letterSpacing: 0.0,
+                            fontWeight: FlutterFlowTheme.of(context)
+                                .headlineMedium
+                                .fontWeight,
+                            fontStyle: FlutterFlowTheme.of(context)
+                                .headlineMedium
+                                .fontStyle,
                           ),
                     ),
                   ),
@@ -138,16 +141,23 @@ class _DiscoverLayout1WidgetState extends State<DiscoverLayout1Widget> {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Text(
-                            key: ValueKey('product_title_ymvj'),
                             'compostable sealable paper sandwich bag',
                             textAlign: TextAlign.start,
                             style: FlutterFlowTheme.of(context)
                                 .titleSmall
                                 .override(
-                                  fontFamily: 'Montserrat',
+                                  font: GoogleFonts.montserrat(
+                                    fontWeight: FontWeight.w500,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .titleSmall
+                                        .fontStyle,
+                                  ),
                                   fontSize: 20.0,
                                   letterSpacing: 0.0,
                                   fontWeight: FontWeight.w500,
+                                  fontStyle: FlutterFlowTheme.of(context)
+                                      .titleSmall
+                                      .fontStyle,
                                 ),
                           ),
                           Align(
@@ -158,19 +168,32 @@ class _DiscoverLayout1WidgetState extends State<DiscoverLayout1Widget> {
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
-                                    fontFamily: 'Montserrat',
+                                    font: GoogleFonts.montserrat(
+                                      fontWeight: FontWeight.bold,
+                                      fontStyle: FlutterFlowTheme.of(context)
+                                          .bodyMedium
+                                          .fontStyle,
+                                    ),
                                     letterSpacing: 0.0,
                                     fontWeight: FontWeight.bold,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .fontStyle,
                                   ),
                             ),
                           ),
                           Align(
                             alignment: AlignmentDirectional(-1.0, 0.0),
                             child: FFButtonWidget(
-                              onPressed: () {
-                                print('soon_button pressed ...');
+                              key: ValueKey('soon_button_ljgp'),
+                              onPressed: () async {
+                                logFirebaseEvent(
+                                    'DISCOVER_LAYOUT1_PAGE_soon_button_ON_TAP');
+                                logFirebaseEvent('soon_button_navigate_to');
+
+                                context.pushNamed(CartWidget.routeName);
                               },
-                              text: 'coming soon!',
+                              text: 'add to cart',
                               options: FFButtonOptions(
                                 width: 160.0,
                                 height: 40.0,
@@ -183,9 +206,23 @@ class _DiscoverLayout1WidgetState extends State<DiscoverLayout1Widget> {
                                 textStyle: FlutterFlowTheme.of(context)
                                     .titleSmall
                                     .override(
-                                      fontFamily: 'Montserrat',
-                                      color: Color(0xB1252525),
+                                      font: GoogleFonts.montserrat(
+                                        fontWeight: FlutterFlowTheme.of(context)
+                                            .titleSmall
+                                            .fontWeight,
+                                        fontStyle: FlutterFlowTheme.of(context)
+                                            .titleSmall
+                                            .fontStyle,
+                                      ),
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryText,
                                       letterSpacing: 0.0,
+                                      fontWeight: FlutterFlowTheme.of(context)
+                                          .titleSmall
+                                          .fontWeight,
+                                      fontStyle: FlutterFlowTheme.of(context)
+                                          .titleSmall
+                                          .fontStyle,
                                     ),
                                 elevation: 0.0,
                                 borderSide: BorderSide(
@@ -220,10 +257,23 @@ class _DiscoverLayout1WidgetState extends State<DiscoverLayout1Widget> {
                                 textStyle: FlutterFlowTheme.of(context)
                                     .titleSmall
                                     .override(
-                                      fontFamily: 'Montserrat',
+                                      font: GoogleFonts.montserrat(
+                                        fontWeight: FlutterFlowTheme.of(context)
+                                            .titleSmall
+                                            .fontWeight,
+                                        fontStyle: FlutterFlowTheme.of(context)
+                                            .titleSmall
+                                            .fontStyle,
+                                      ),
                                       color: FlutterFlowTheme.of(context)
                                           .primaryBackground,
                                       letterSpacing: 0.0,
+                                      fontWeight: FlutterFlowTheme.of(context)
+                                          .titleSmall
+                                          .fontWeight,
+                                      fontStyle: FlutterFlowTheme.of(context)
+                                          .titleSmall
+                                          .fontStyle,
                                     ),
                                 elevation: 0.0,
                                 borderSide: BorderSide(
@@ -370,10 +420,23 @@ class _DiscoverLayout1WidgetState extends State<DiscoverLayout1Widget> {
                         style: FlutterFlowTheme.of(context)
                             .headlineMedium
                             .override(
-                              fontFamily: 'Montserrat',
+                              font: GoogleFonts.montserrat(
+                                fontWeight: FlutterFlowTheme.of(context)
+                                    .headlineMedium
+                                    .fontWeight,
+                                fontStyle: FlutterFlowTheme.of(context)
+                                    .headlineMedium
+                                    .fontStyle,
+                              ),
                               color: FlutterFlowTheme.of(context).secondaryText,
                               fontSize: 20.0,
                               letterSpacing: 0.0,
+                              fontWeight: FlutterFlowTheme.of(context)
+                                  .headlineMedium
+                                  .fontWeight,
+                              fontStyle: FlutterFlowTheme.of(context)
+                                  .headlineMedium
+                                  .fontStyle,
                             ),
                       ),
                     ),
@@ -393,9 +456,22 @@ class _DiscoverLayout1WidgetState extends State<DiscoverLayout1Widget> {
                         style: FlutterFlowTheme.of(context)
                             .headlineMedium
                             .override(
-                              fontFamily: 'Montserrat',
+                              font: GoogleFonts.montserrat(
+                                fontWeight: FlutterFlowTheme.of(context)
+                                    .headlineMedium
+                                    .fontWeight,
+                                fontStyle: FlutterFlowTheme.of(context)
+                                    .headlineMedium
+                                    .fontStyle,
+                              ),
                               fontSize: 17.0,
                               letterSpacing: 0.0,
+                              fontWeight: FlutterFlowTheme.of(context)
+                                  .headlineMedium
+                                  .fontWeight,
+                              fontStyle: FlutterFlowTheme.of(context)
+                                  .headlineMedium
+                                  .fontStyle,
                             ),
                       ),
                     ),
@@ -405,9 +481,17 @@ class _DiscoverLayout1WidgetState extends State<DiscoverLayout1Widget> {
                     child: Text(
                       '• single‐use plastic bags can take up to 1000 years to photodegrade.',
                       style: FlutterFlowTheme.of(context).bodyLarge.override(
-                            fontFamily: 'Montserrat',
+                            font: GoogleFonts.montserrat(
+                              fontWeight: FontWeight.w300,
+                              fontStyle: FlutterFlowTheme.of(context)
+                                  .bodyLarge
+                                  .fontStyle,
+                            ),
                             letterSpacing: 0.0,
                             fontWeight: FontWeight.w300,
+                            fontStyle: FlutterFlowTheme.of(context)
+                                .bodyLarge
+                                .fontStyle,
                           ),
                     ),
                   ),
@@ -416,9 +500,17 @@ class _DiscoverLayout1WidgetState extends State<DiscoverLayout1Widget> {
                     child: Text(
                       '• less than 10% of all plastic ever produced has been recycled.',
                       style: FlutterFlowTheme.of(context).bodyLarge.override(
-                            fontFamily: 'Montserrat',
+                            font: GoogleFonts.montserrat(
+                              fontWeight: FontWeight.w300,
+                              fontStyle: FlutterFlowTheme.of(context)
+                                  .bodyLarge
+                                  .fontStyle,
+                            ),
                             letterSpacing: 0.0,
                             fontWeight: FontWeight.w300,
+                            fontStyle: FlutterFlowTheme.of(context)
+                                .bodyLarge
+                                .fontStyle,
                           ),
                     ),
                   ),
@@ -427,9 +519,17 @@ class _DiscoverLayout1WidgetState extends State<DiscoverLayout1Widget> {
                     child: Text(
                       '• in the U.S., only 5% of plastic waste is properly recycled.',
                       style: FlutterFlowTheme.of(context).bodyLarge.override(
-                            fontFamily: 'Montserrat',
+                            font: GoogleFonts.montserrat(
+                              fontWeight: FontWeight.w300,
+                              fontStyle: FlutterFlowTheme.of(context)
+                                  .bodyLarge
+                                  .fontStyle,
+                            ),
                             letterSpacing: 0.0,
                             fontWeight: FontWeight.w300,
+                            fontStyle: FlutterFlowTheme.of(context)
+                                .bodyLarge
+                                .fontStyle,
                           ),
                     ),
                   ),
@@ -438,9 +538,17 @@ class _DiscoverLayout1WidgetState extends State<DiscoverLayout1Widget> {
                     child: Text(
                       '• about 85% of plastic waste ends up in landfills, with 10% being incinerated.',
                       style: FlutterFlowTheme.of(context).bodyLarge.override(
-                            fontFamily: 'Montserrat',
+                            font: GoogleFonts.montserrat(
+                              fontWeight: FontWeight.w300,
+                              fontStyle: FlutterFlowTheme.of(context)
+                                  .bodyLarge
+                                  .fontStyle,
+                            ),
                             letterSpacing: 0.0,
                             fontWeight: FontWeight.w300,
+                            fontStyle: FlutterFlowTheme.of(context)
+                                .bodyLarge
+                                .fontStyle,
                           ),
                     ),
                   ),
@@ -459,9 +567,22 @@ class _DiscoverLayout1WidgetState extends State<DiscoverLayout1Widget> {
                         style: FlutterFlowTheme.of(context)
                             .headlineMedium
                             .override(
-                              fontFamily: 'Montserrat',
+                              font: GoogleFonts.montserrat(
+                                fontWeight: FlutterFlowTheme.of(context)
+                                    .headlineMedium
+                                    .fontWeight,
+                                fontStyle: FlutterFlowTheme.of(context)
+                                    .headlineMedium
+                                    .fontStyle,
+                              ),
                               fontSize: 18.0,
                               letterSpacing: 0.0,
+                              fontWeight: FlutterFlowTheme.of(context)
+                                  .headlineMedium
+                                  .fontWeight,
+                              fontStyle: FlutterFlowTheme.of(context)
+                                  .headlineMedium
+                                  .fontStyle,
                             ),
                       ),
                     ),
@@ -494,39 +615,6 @@ class _DiscoverLayout1WidgetState extends State<DiscoverLayout1Widget> {
                             fit: BoxFit.cover,
                           ),
                         ),
-                        Align(
-                          alignment: AlignmentDirectional(0.01, -0.5),
-                          child: FFButtonWidget(
-                            onPressed: () {
-                              print('learnButton pressed ...');
-                            },
-                            text: 'learn more',
-                            options: FFButtonOptions(
-                              width: double.infinity,
-                              height: 40.0,
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  16.0, 0.0, 16.0, 0.0),
-                              iconAlignment: IconAlignment.end,
-                              iconPadding: EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 0.0, 0.0, 0.0),
-                              color: Color(0x0032640F),
-                              textStyle: FlutterFlowTheme.of(context)
-                                  .titleSmall
-                                  .override(
-                                    fontFamily: 'Montserrat',
-                                    color: FlutterFlowTheme.of(context)
-                                        .primaryBackground,
-                                    fontSize: 20.0,
-                                    letterSpacing: 0.0,
-                                  ),
-                              elevation: 0.0,
-                              borderSide: BorderSide(
-                                width: 2.0,
-                              ),
-                              borderRadius: BorderRadius.circular(8.0),
-                            ),
-                          ),
-                        ),
                       ],
                     ),
                   ),
@@ -544,9 +632,22 @@ class _DiscoverLayout1WidgetState extends State<DiscoverLayout1Widget> {
                         style: FlutterFlowTheme.of(context)
                             .headlineMedium
                             .override(
-                              fontFamily: 'Montserrat',
+                              font: GoogleFonts.montserrat(
+                                fontWeight: FlutterFlowTheme.of(context)
+                                    .headlineMedium
+                                    .fontWeight,
+                                fontStyle: FlutterFlowTheme.of(context)
+                                    .headlineMedium
+                                    .fontStyle,
+                              ),
                               fontSize: 18.0,
                               letterSpacing: 0.0,
+                              fontWeight: FlutterFlowTheme.of(context)
+                                  .headlineMedium
+                                  .fontWeight,
+                              fontStyle: FlutterFlowTheme.of(context)
+                                  .headlineMedium
+                                  .fontStyle,
                             ),
                       ),
                     ),
@@ -556,9 +657,17 @@ class _DiscoverLayout1WidgetState extends State<DiscoverLayout1Widget> {
                     child: Text(
                       'start tracking your carbon footprint today and help create a cleaner, greener future',
                       style: FlutterFlowTheme.of(context).bodyLarge.override(
-                            fontFamily: 'Montserrat',
+                            font: GoogleFonts.montserrat(
+                              fontWeight: FontWeight.w300,
+                              fontStyle: FlutterFlowTheme.of(context)
+                                  .bodyLarge
+                                  .fontStyle,
+                            ),
                             letterSpacing: 0.0,
                             fontWeight: FontWeight.w300,
+                            fontStyle: FlutterFlowTheme.of(context)
+                                .bodyLarge
+                                .fontStyle,
                           ),
                     ),
                   ),
@@ -594,8 +703,21 @@ class _DiscoverLayout1WidgetState extends State<DiscoverLayout1Widget> {
                             textStyle: FlutterFlowTheme.of(context)
                                 .titleSmall
                                 .override(
-                                  fontFamily: 'Montserrat',
+                                  font: GoogleFonts.montserrat(
+                                    fontWeight: FlutterFlowTheme.of(context)
+                                        .titleSmall
+                                        .fontWeight,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .titleSmall
+                                        .fontStyle,
+                                  ),
                                   letterSpacing: 0.0,
+                                  fontWeight: FlutterFlowTheme.of(context)
+                                      .titleSmall
+                                      .fontWeight,
+                                  fontStyle: FlutterFlowTheme.of(context)
+                                      .titleSmall
+                                      .fontStyle,
                                 ),
                             elevation: 0.0,
                             borderSide: BorderSide(

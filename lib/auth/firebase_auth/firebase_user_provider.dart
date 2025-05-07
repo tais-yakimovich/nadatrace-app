@@ -5,8 +5,8 @@ import '../base_auth_user_provider.dart';
 
 export '../base_auth_user_provider.dart';
 
-class NadatraceAppFirebaseUser extends BaseAuthUser {
-  NadatraceAppFirebaseUser(this.user);
+class NadatraceDevFirebaseUser extends BaseAuthUser {
+  NadatraceDevFirebaseUser(this.user);
   User? user;
   bool get loggedIn => user != null;
 
@@ -59,17 +59,17 @@ class NadatraceAppFirebaseUser extends BaseAuthUser {
   static BaseAuthUser fromUserCredential(UserCredential userCredential) =>
       fromFirebaseUser(userCredential.user);
   static BaseAuthUser fromFirebaseUser(User? user) =>
-      NadatraceAppFirebaseUser(user);
+      NadatraceDevFirebaseUser(user);
 }
 
-Stream<BaseAuthUser> nadatraceAppFirebaseUserStream() => FirebaseAuth.instance
+Stream<BaseAuthUser> nadatraceDevFirebaseUserStream() => FirebaseAuth.instance
         .authStateChanges()
         .debounce((user) => user == null && !loggedIn
             ? TimerStream(true, const Duration(seconds: 1))
             : Stream.value(user))
         .map<BaseAuthUser>(
       (user) {
-        currentUser = NadatraceAppFirebaseUser(user);
+        currentUser = NadatraceDevFirebaseUser(user);
         return currentUser!;
       },
     );

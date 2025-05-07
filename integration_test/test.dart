@@ -4,17 +4,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:integration_test/integration_test.dart';
-import 'package:nadatrace_app/flutter_flow/flutter_flow_drop_down.dart';
-import 'package:nadatrace_app/flutter_flow/flutter_flow_icon_button.dart';
-import 'package:nadatrace_app/flutter_flow/flutter_flow_widgets.dart';
+import 'package:nadatrace_dev/flutter_flow/flutter_flow_drop_down.dart';
+import 'package:nadatrace_dev/flutter_flow/flutter_flow_icon_button.dart';
+import 'package:nadatrace_dev/flutter_flow/flutter_flow_widgets.dart';
 import 'package:ff_theme/flutter_flow/flutter_flow_theme.dart';
-import 'package:nadatrace_app/index.dart';
-import 'package:nadatrace_app/main.dart';
-import 'package:nadatrace_app/flutter_flow/flutter_flow_util.dart';
+import 'package:nadatrace_dev/index.dart';
+import 'package:nadatrace_dev/main.dart';
+import 'package:nadatrace_dev/flutter_flow/flutter_flow_util.dart';
 
 import 'package:provider/provider.dart';
-import 'package:nadatrace_app/backend/firebase/firebase_config.dart';
-import 'package:nadatrace_app/auth/firebase_auth/auth_util.dart';
+import 'package:nadatrace_dev/backend/firebase/firebase_config.dart';
+import 'package:nadatrace_dev/auth/firebase_auth/auth_util.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 void main() async {
@@ -45,7 +45,7 @@ void main() async {
     expect(find.byKey(const ValueKey('Text_8gd5')), findsOneWidget);
   });
 
-  testWidgets('US3 User Account Creation', (WidgetTester tester) async {
+  testWidgets('US3 User Account Creation ', (WidgetTester tester) async {
     _overrideOnError();
 
     await tester.pumpWidget(MyApp(
@@ -58,12 +58,34 @@ void main() async {
         find.byKey(const ValueKey('Signup-email_45vb')), 'test123@gmail.com');
     await tester.pumpAndSettle(const Duration(milliseconds: 60000));
     await tester.enterText(
-        find.byKey(const ValueKey('signup-password_6tej')), '1234567');
+        find.byKey(const ValueKey('signup-password_6tej')), '12345678');
     await tester.pumpAndSettle(const Duration(milliseconds: 6000));
     await tester.enterText(
-        find.byKey(const ValueKey('signup-ConfirmPassword_n0vc')), '1234567');
+        find.byKey(const ValueKey('signup-ConfirmPassword_n0vc')), '12345678');
     await tester.pumpAndSettle(const Duration(milliseconds: 6000));
-    expect(find.byKey(const ValueKey('product_title_ymvj')), findsOneWidget);
+    await tester.tap(find.byKey(const ValueKey('signup-button_ru3g')));
+    await tester.pumpAndSettle(const Duration(milliseconds: 6000));
+    expect(find.byKey(const ValueKey('learnButton_rer7')), findsOneWidget);
+  });
+
+  testWidgets('US3 User Account Creation', (WidgetTester tester) async {
+    _overrideOnError();
+
+    await tester.pumpWidget(MyApp(
+      entryPage: LoginWidget(),
+    ));
+    await GoogleFonts.pendingFonts();
+
+    await tester.pumpAndSettle(const Duration(milliseconds: 6000));
+    await tester.enterText(
+        find.byKey(const ValueKey('login-email_ox5n')), 'test123@gmail.com');
+    await tester.pumpAndSettle(const Duration(milliseconds: 6000));
+    await tester.enterText(
+        find.byKey(const ValueKey('login-password_zt07')), '12345678');
+    await tester.pumpAndSettle(const Duration(milliseconds: 6000));
+    await tester.tap(find.byKey(const ValueKey('Button_login_49i6')));
+    await tester.pumpAndSettle(const Duration(milliseconds: 6000));
+    expect(find.byKey(const ValueKey('soon_button_ljgp')), findsOneWidget);
   });
 }
 

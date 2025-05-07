@@ -7,6 +7,7 @@ import '/flutter_flow/form_field_controller.dart';
 import '/index.dart';
 import 'package:ff_theme/flutter_flow/flutter_flow_theme.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'quiz_model.dart';
 export 'quiz_model.dart';
 
@@ -75,8 +76,21 @@ class _QuizWidgetState extends State<QuizWidget> {
                   child: Text(
                     'how do you like the app?',
                     style: FlutterFlowTheme.of(context).headlineMedium.override(
-                          fontFamily: 'Montserrat',
+                          font: GoogleFonts.montserrat(
+                            fontWeight: FlutterFlowTheme.of(context)
+                                .headlineMedium
+                                .fontWeight,
+                            fontStyle: FlutterFlowTheme.of(context)
+                                .headlineMedium
+                                .fontStyle,
+                          ),
                           letterSpacing: 0.0,
+                          fontWeight: FlutterFlowTheme.of(context)
+                              .headlineMedium
+                              .fontWeight,
+                          fontStyle: FlutterFlowTheme.of(context)
+                              .headlineMedium
+                              .fontStyle,
                         ),
                   ),
                 ),
@@ -102,8 +116,20 @@ class _QuizWidgetState extends State<QuizWidget> {
                     width: 94.77,
                     height: 40.0,
                     textStyle: FlutterFlowTheme.of(context).bodyMedium.override(
-                          fontFamily: 'Montserrat',
+                          font: GoogleFonts.montserrat(
+                            fontWeight: FlutterFlowTheme.of(context)
+                                .bodyMedium
+                                .fontWeight,
+                            fontStyle: FlutterFlowTheme.of(context)
+                                .bodyMedium
+                                .fontStyle,
+                          ),
                           letterSpacing: 0.0,
+                          fontWeight: FlutterFlowTheme.of(context)
+                              .bodyMedium
+                              .fontWeight,
+                          fontStyle:
+                              FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                         ),
                     hintText: 'Select...',
                     icon: Icon(
@@ -130,8 +156,21 @@ class _QuizWidgetState extends State<QuizWidget> {
                   child: Text(
                     'share your thoughts',
                     style: FlutterFlowTheme.of(context).headlineMedium.override(
-                          fontFamily: 'Montserrat',
+                          font: GoogleFonts.montserrat(
+                            fontWeight: FlutterFlowTheme.of(context)
+                                .headlineMedium
+                                .fontWeight,
+                            fontStyle: FlutterFlowTheme.of(context)
+                                .headlineMedium
+                                .fontStyle,
+                          ),
                           letterSpacing: 0.0,
+                          fontWeight: FlutterFlowTheme.of(context)
+                              .headlineMedium
+                              .fontWeight,
+                          fontStyle: FlutterFlowTheme.of(context)
+                              .headlineMedium
+                              .fontStyle,
                         ),
                   ),
                 ),
@@ -149,17 +188,43 @@ class _QuizWidgetState extends State<QuizWidget> {
                         labelStyle: FlutterFlowTheme.of(context)
                             .labelMedium
                             .override(
-                              fontFamily: 'Montserrat',
+                              font: GoogleFonts.montserrat(
+                                fontWeight: FlutterFlowTheme.of(context)
+                                    .labelMedium
+                                    .fontWeight,
+                                fontStyle: FlutterFlowTheme.of(context)
+                                    .labelMedium
+                                    .fontStyle,
+                              ),
                               color: FlutterFlowTheme.of(context).primaryText,
                               letterSpacing: 0.0,
+                              fontWeight: FlutterFlowTheme.of(context)
+                                  .labelMedium
+                                  .fontWeight,
+                              fontStyle: FlutterFlowTheme.of(context)
+                                  .labelMedium
+                                  .fontStyle,
                             ),
                         hintText: 'type here...',
                         hintStyle: FlutterFlowTheme.of(context)
                             .labelMedium
                             .override(
-                              fontFamily: 'Montserrat',
+                              font: GoogleFonts.montserrat(
+                                fontWeight: FlutterFlowTheme.of(context)
+                                    .labelMedium
+                                    .fontWeight,
+                                fontStyle: FlutterFlowTheme.of(context)
+                                    .labelMedium
+                                    .fontStyle,
+                              ),
                               color: FlutterFlowTheme.of(context).primaryText,
                               letterSpacing: 0.0,
+                              fontWeight: FlutterFlowTheme.of(context)
+                                  .labelMedium
+                                  .fontWeight,
+                              fontStyle: FlutterFlowTheme.of(context)
+                                  .labelMedium
+                                  .fontStyle,
                             ),
                         enabledBorder: OutlineInputBorder(
                           borderSide: BorderSide(
@@ -195,9 +260,22 @@ class _QuizWidgetState extends State<QuizWidget> {
                             FlutterFlowTheme.of(context).primaryBackground,
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'Montserrat',
+                            font: GoogleFonts.montserrat(
+                              fontWeight: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .fontWeight,
+                              fontStyle: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .fontStyle,
+                            ),
                             color: FlutterFlowTheme.of(context).primaryText,
                             letterSpacing: 0.0,
+                            fontWeight: FlutterFlowTheme.of(context)
+                                .bodyMedium
+                                .fontWeight,
+                            fontStyle: FlutterFlowTheme.of(context)
+                                .bodyMedium
+                                .fontStyle,
                           ),
                       maxLines: 10,
                       cursorColor: FlutterFlowTheme.of(context).primaryText,
@@ -235,11 +313,19 @@ class _QuizWidgetState extends State<QuizWidget> {
                       color: Color(0xFFA49E8F),
                       textStyle:
                           FlutterFlowTheme.of(context).labelMedium.override(
-                                fontFamily: 'Montserrat',
+                                font: GoogleFonts.montserrat(
+                                  fontWeight: FontWeight.w500,
+                                  fontStyle: FlutterFlowTheme.of(context)
+                                      .labelMedium
+                                      .fontStyle,
+                                ),
                                 color: FlutterFlowTheme.of(context).primaryText,
                                 fontSize: 20.0,
                                 letterSpacing: 0.0,
                                 fontWeight: FontWeight.w500,
+                                fontStyle: FlutterFlowTheme.of(context)
+                                    .labelMedium
+                                    .fontStyle,
                               ),
                       elevation: 0.0,
                       borderSide: BorderSide(
@@ -270,11 +356,19 @@ class _QuizWidgetState extends State<QuizWidget> {
                       color: Color(0xFFA49E8F),
                       textStyle:
                           FlutterFlowTheme.of(context).labelMedium.override(
-                                fontFamily: 'Montserrat',
+                                font: GoogleFonts.montserrat(
+                                  fontWeight: FontWeight.w500,
+                                  fontStyle: FlutterFlowTheme.of(context)
+                                      .labelMedium
+                                      .fontStyle,
+                                ),
                                 color: FlutterFlowTheme.of(context).primaryText,
                                 fontSize: 20.0,
                                 letterSpacing: 0.0,
                                 fontWeight: FontWeight.w500,
+                                fontStyle: FlutterFlowTheme.of(context)
+                                    .labelMedium
+                                    .fontStyle,
                               ),
                       elevation: 0.0,
                       borderSide: BorderSide(

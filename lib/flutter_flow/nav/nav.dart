@@ -88,6 +88,33 @@ GoRouter createRouter(AppStateNotifier appStateNotifier, [Widget? entryPage]) =>
               : HomePageWidget(),
         ),
         FFRoute(
+          name: QuizWidget.routeName,
+          path: QuizWidget.routePath,
+          builder: (context, params) => QuizWidget(),
+        ),
+        FFRoute(
+          name: ProfilesettingsWidget.routeName,
+          path: ProfilesettingsWidget.routePath,
+          builder: (context, params) => params.isEmpty
+              ? NavBarPage(initialPage: 'Profilesettings')
+              : ProfilesettingsWidget(),
+        ),
+        FFRoute(
+          name: OrderWidget.routeName,
+          path: OrderWidget.routePath,
+          builder: (context, params) => OrderWidget(),
+        ),
+        FFRoute(
+          name: UpdateshippingWidget.routeName,
+          path: UpdateshippingWidget.routePath,
+          builder: (context, params) => UpdateshippingWidget(),
+        ),
+        FFRoute(
+          name: PaymentinfoWidget.routeName,
+          path: PaymentinfoWidget.routePath,
+          builder: (context, params) => PaymentinfoWidget(),
+        ),
+        FFRoute(
           name: HomePageWidget.routeName,
           path: HomePageWidget.routePath,
           builder: (context, params) => HomePageWidget(),
@@ -115,41 +142,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier, [Widget? entryPage]) =>
           builder: (context, params) => ProductPageWidget(),
         ),
         FFRoute(
-          name: QuizWidget.routeName,
-          path: QuizWidget.routePath,
-          builder: (context, params) => QuizWidget(),
-        ),
-        FFRoute(
-          name: CartWidget.routeName,
-          path: CartWidget.routePath,
-          builder: (context, params) => CartWidget(),
-        ),
-        FFRoute(
-          name: ProfilesettingsWidget.routeName,
-          path: ProfilesettingsWidget.routePath,
-          builder: (context, params) => params.isEmpty
-              ? NavBarPage(initialPage: 'Profilesettings')
-              : ProfilesettingsWidget(),
-        ),
-        FFRoute(
           name: MysubscriptionWidget.routeName,
           path: MysubscriptionWidget.routePath,
           builder: (context, params) => MysubscriptionWidget(),
-        ),
-        FFRoute(
-          name: OrderWidget.routeName,
-          path: OrderWidget.routePath,
-          builder: (context, params) => OrderWidget(),
-        ),
-        FFRoute(
-          name: UpdateshippingWidget.routeName,
-          path: UpdateshippingWidget.routePath,
-          builder: (context, params) => UpdateshippingWidget(),
-        ),
-        FFRoute(
-          name: DiscoverLayout2Widget.routeName,
-          path: DiscoverLayout2Widget.routePath,
-          builder: (context, params) => DiscoverLayout2Widget(),
         ),
         FFRoute(
           name: TrackingWidget.routeName,
@@ -159,9 +154,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier, [Widget? entryPage]) =>
               : TrackingWidget(),
         ),
         FFRoute(
-          name: PaymentinfoWidget.routeName,
-          path: PaymentinfoWidget.routePath,
-          builder: (context, params) => PaymentinfoWidget(),
+          name: CartWidget.routeName,
+          path: CartWidget.routePath,
+          builder: (context, params) => CartWidget(),
+        ),
+        FFRoute(
+          name: CheckoutConfirmationWidget.routeName,
+          path: CheckoutConfirmationWidget.routePath,
+          builder: (context, params) => CheckoutConfirmationWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
