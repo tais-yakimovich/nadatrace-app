@@ -16,4 +16,4 @@ Tracked through Firebase.
 * Track the new user and returning users and then display user retention as a percentage. This is tracked through Firebase already.
 
 ## Tasks Success:
-Task Success ensures users can successfully complete key actions in the app, such as signing up, joining challenges, redeeming rewards, sharing progress, and making smooth purchases. It is measured by tracking completion rates, error rates, time taken, and drop-off points using tools like Firebase analytics.
+* Ensures users can successfully complete key actions in the app, such as signing up, joining challenges, redeeming rewards, sharing progress, and making smooth purchases. It is measured by tracking completion rates, error rates, time taken, and drop-off points using tools like Firebase analytics.
