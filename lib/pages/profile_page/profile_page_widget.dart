@@ -142,7 +142,8 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                         if (selectedMedia != null &&
                             selectedMedia.every((m) =>
                                 validateFileFormat(m.storagePath, context))) {
-                          safeSetState(() => _model.isDataUploading = true);
+                          safeSetState(
+                              () => _model.isDataUploading_profilePhoto = true);
                           var selectedUploadedFiles = <FFUploadedFile>[];
 
                           var downloadUrls = <String>[];
@@ -154,6 +155,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                       height: m.dimensions?.height,
                                       width: m.dimensions?.width,
                                       blurHash: m.blurHash,
+                                      originalFilename: m.originalFilename,
                                     ))
                                 .toList();
 
@@ -167,15 +169,16 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                 .map((u) => u!)
                                 .toList();
                           } finally {
-                            _model.isDataUploading = false;
+                            _model.isDataUploading_profilePhoto = false;
                           }
                           if (selectedUploadedFiles.length ==
                                   selectedMedia.length &&
                               downloadUrls.length == selectedMedia.length) {
                             safeSetState(() {
-                              _model.uploadedLocalFile =
+                              _model.uploadedLocalFile_profilePhoto =
                                   selectedUploadedFiles.first;
-                              _model.uploadedFileUrl = downloadUrls.first;
+                              _model.uploadedFileUrl_profilePhoto =
+                                  downloadUrls.first;
                             });
                           } else {
                             safeSetState(() {});
@@ -187,7 +190,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
 
                         await currentUserReference!
                             .update(createUsersRecordData(
-                          photoUrl: _model.uploadedFileUrl,
+                          photoUrl: _model.uploadedFileUrl_profilePhoto,
                         ));
                       },
                       child: Stack(
@@ -202,7 +205,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                 image: DecorationImage(
                                   fit: BoxFit.cover,
                                   image: Image.network(
-                                    _model.uploadedFileUrl,
+                                    _model.uploadedFileUrl_profilePhoto,
                                   ).image,
                                 ),
                                 borderRadius: BorderRadius.circular(68.0),

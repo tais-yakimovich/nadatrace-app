@@ -9,6 +9,8 @@ import '/main.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 
 import '/index.dart';
+import 'package:lock_orientation_library_opafp4/index.dart'
+    as $lock_orientation_library_opafp4;
 
 export 'package:go_router/go_router.dart';
 export 'serialization_util.dart';
@@ -70,101 +72,112 @@ class AppStateNotifier extends ChangeNotifier {
   }
 }
 
-GoRouter createRouter(AppStateNotifier appStateNotifier, [Widget? entryPage]) =>
-    GoRouter(
-      initialLocation: '/',
-      debugLogDiagnostics: true,
-      refreshListenable: appStateNotifier,
-      navigatorKey: appNavigatorKey,
-      errorBuilder: (context, state) => appStateNotifier.loggedIn
-          ? entryPage ?? NavBarPage()
-          : HomePageWidget(),
-      routes: [
-        FFRoute(
-          name: '_initialize',
-          path: '/',
-          builder: (context, _) => appStateNotifier.loggedIn
-              ? entryPage ?? NavBarPage()
-              : HomePageWidget(),
-        ),
-        FFRoute(
-          name: QuizWidget.routeName,
-          path: QuizWidget.routePath,
-          builder: (context, params) => QuizWidget(),
-        ),
-        FFRoute(
-          name: ProfilesettingsWidget.routeName,
-          path: ProfilesettingsWidget.routePath,
-          builder: (context, params) => params.isEmpty
-              ? NavBarPage(initialPage: 'Profilesettings')
-              : ProfilesettingsWidget(),
-        ),
-        FFRoute(
-          name: OrderWidget.routeName,
-          path: OrderWidget.routePath,
-          builder: (context, params) => OrderWidget(),
-        ),
-        FFRoute(
-          name: UpdateshippingWidget.routeName,
-          path: UpdateshippingWidget.routePath,
-          builder: (context, params) => UpdateshippingWidget(),
-        ),
-        FFRoute(
-          name: PaymentinfoWidget.routeName,
-          path: PaymentinfoWidget.routePath,
-          builder: (context, params) => PaymentinfoWidget(),
-        ),
-        FFRoute(
-          name: HomePageWidget.routeName,
-          path: HomePageWidget.routePath,
-          builder: (context, params) => HomePageWidget(),
-        ),
-        FFRoute(
-          name: LoginWidget.routeName,
-          path: LoginWidget.routePath,
-          builder: (context, params) => LoginWidget(),
-        ),
-        FFRoute(
-          name: DiscoverLayout1Widget.routeName,
-          path: DiscoverLayout1Widget.routePath,
-          builder: (context, params) => params.isEmpty
-              ? NavBarPage(initialPage: 'discoverLayout1')
-              : DiscoverLayout1Widget(),
-        ),
-        FFRoute(
-          name: ProfilePageWidget.routeName,
-          path: ProfilePageWidget.routePath,
-          builder: (context, params) => ProfilePageWidget(),
-        ),
-        FFRoute(
-          name: ProductPageWidget.routeName,
-          path: ProductPageWidget.routePath,
-          builder: (context, params) => ProductPageWidget(),
-        ),
-        FFRoute(
-          name: MysubscriptionWidget.routeName,
-          path: MysubscriptionWidget.routePath,
-          builder: (context, params) => MysubscriptionWidget(),
-        ),
-        FFRoute(
-          name: TrackingWidget.routeName,
-          path: TrackingWidget.routePath,
-          builder: (context, params) => params.isEmpty
-              ? NavBarPage(initialPage: 'tracking')
-              : TrackingWidget(),
-        ),
-        FFRoute(
-          name: CartWidget.routeName,
-          path: CartWidget.routePath,
-          builder: (context, params) => CartWidget(),
-        ),
-        FFRoute(
-          name: CheckoutConfirmationWidget.routeName,
-          path: CheckoutConfirmationWidget.routePath,
-          builder: (context, params) => CheckoutConfirmationWidget(),
-        )
-      ].map((r) => r.toRoute(appStateNotifier)).toList(),
-    );
+GoRouter createRouter(AppStateNotifier appStateNotifier, [Widget? entryPage]) {
+  $lock_orientation_library_opafp4.initializeRoutes(
+    homePageWidgetName: 'lock_orientation_library_opafp4.HomePage',
+  );
+
+  return GoRouter(
+    initialLocation: '/',
+    debugLogDiagnostics: true,
+    refreshListenable: appStateNotifier,
+    navigatorKey: appNavigatorKey,
+    errorBuilder: (context, state) => appStateNotifier.loggedIn
+        ? entryPage ?? NavBarPage()
+        : HomePageWidget(),
+    routes: [
+      FFRoute(
+        name: '_initialize',
+        path: '/',
+        builder: (context, _) => appStateNotifier.loggedIn
+            ? entryPage ?? NavBarPage()
+            : HomePageWidget(),
+      ),
+      FFRoute(
+        name: QuizWidget.routeName,
+        path: QuizWidget.routePath,
+        builder: (context, params) => QuizWidget(),
+      ),
+      FFRoute(
+        name: ProfilesettingsWidget.routeName,
+        path: ProfilesettingsWidget.routePath,
+        builder: (context, params) => params.isEmpty
+            ? NavBarPage(initialPage: 'Profilesettings')
+            : ProfilesettingsWidget(),
+      ),
+      FFRoute(
+        name: OrderWidget.routeName,
+        path: OrderWidget.routePath,
+        builder: (context, params) => OrderWidget(),
+      ),
+      FFRoute(
+        name: UpdateshippingWidget.routeName,
+        path: UpdateshippingWidget.routePath,
+        builder: (context, params) => UpdateshippingWidget(),
+      ),
+      FFRoute(
+        name: PaymentinfoWidget.routeName,
+        path: PaymentinfoWidget.routePath,
+        builder: (context, params) => PaymentinfoWidget(),
+      ),
+      FFRoute(
+        name: HomePageWidget.routeName,
+        path: HomePageWidget.routePath,
+        builder: (context, params) => HomePageWidget(),
+      ),
+      FFRoute(
+        name: LoginWidget.routeName,
+        path: LoginWidget.routePath,
+        builder: (context, params) => LoginWidget(),
+      ),
+      FFRoute(
+        name: DiscoverLayout1Widget.routeName,
+        path: DiscoverLayout1Widget.routePath,
+        builder: (context, params) => params.isEmpty
+            ? NavBarPage(initialPage: 'discoverLayout1')
+            : DiscoverLayout1Widget(),
+      ),
+      FFRoute(
+        name: ProfilePageWidget.routeName,
+        path: ProfilePageWidget.routePath,
+        builder: (context, params) => ProfilePageWidget(),
+      ),
+      FFRoute(
+        name: ProductPageWidget.routeName,
+        path: ProductPageWidget.routePath,
+        builder: (context, params) => ProductPageWidget(),
+      ),
+      FFRoute(
+        name: MysubscriptionWidget.routeName,
+        path: MysubscriptionWidget.routePath,
+        builder: (context, params) => MysubscriptionWidget(),
+      ),
+      FFRoute(
+        name: TrackingWidget.routeName,
+        path: TrackingWidget.routePath,
+        builder: (context, params) => params.isEmpty
+            ? NavBarPage(initialPage: 'tracking')
+            : TrackingWidget(),
+      ),
+      FFRoute(
+        name: CartWidget.routeName,
+        path: CartWidget.routePath,
+        builder: (context, params) => CartWidget(),
+      ),
+      FFRoute(
+        name: CheckoutConfirmationWidget.routeName,
+        path: CheckoutConfirmationWidget.routePath,
+        builder: (context, params) => CheckoutConfirmationWidget(),
+      ),
+      FFRoute(
+        name: $lock_orientation_library_opafp4.HomePageWidget.routeName,
+        path: $lock_orientation_library_opafp4.HomePageWidget.routePath,
+        builder: (context, params) =>
+            $lock_orientation_library_opafp4.HomePageWidget(),
+      )
+    ].map((r) => r.toRoute(appStateNotifier)).toList(),
+  );
+}
 
 extension NavParamExtensions on Map<String, String?> {
   Map<String, String> get withoutNulls => Map.fromEntries(

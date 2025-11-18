@@ -120,6 +120,11 @@ bool _shouldIgnoreError(String error) {
   if (error.contains('setState() called after dispose()')) {
     return true;
   }
+  // Web-specific error when interacting with TextInputType.emailAddress
+  if (error.contains('setSelectionRange') &&
+      error.contains('HTMLInputElement')) {
+    return true;
+  }
 
   return false;
 }
